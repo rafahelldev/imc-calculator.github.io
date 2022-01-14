@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Descubra o seu índice de massa corporal em segundos!">
+  <title>Calculadora IMC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="script.js"></script>
+</head>
+
+<body class="body"> <!-- 
+  <div class="container__opacity">
+    <div class="popup">
+      <p class="popup__complement">IMC: 16,6</p>
+
+      <div class="popup__message message">
+        <p class="message__text">Seu quadro é:</p>
+        <p class="message__text message__text--status">ACIMA DO PESO</p>
+      </div>
+
+      <button class="popup__button" onclick="">Fechar</button>
+    </div>
+  </div> -->
+  <div class="container">
+    <h1 class="container__title">Calculadora IMC</h1>
+
+    <section class="container__section container__section--table">
+      <div class="column column--left">
+        <h2 class="column__legend">IMC</h2>
+
+        <ul class="table">
+          <li class="table__item">Menor do que 18,5</li>
+          <li class="table__item">Entre 18,5 e 24,9</li>
+          <li class="table__item">Entre 25,0 e 29,9</li>
+          <li class="table__item">Entre 30,0 e 34,9</li>
+          <li class="table__item">Entre 35,0 e 39,9</li>
+          <li class="table__item">Mais do que 40</li>
+        </ul>
+
+      </div>
+      <div class="column">
+        <h2 class="column__legend">Resultados</h2>
+
+        <ul class="table">
+          <li class="table__item">Abaixo do peso</li>
+          <li class="table__item">Peso normal</li>
+          <li class="table__item">Sobrepeso</li>
+          <li class="table__item">Obesidade grau 1</li>
+          <li class="table__item">Obesidade grau 2</li>
+          <li class="table__item">Obesidade grau 3</li>
+        </ul>
+
+      </div>
+    </section>
+    <section class="container__section">
+      <form class="form" action="">
+        <legend class="form__legend">Complete os campos abaixo</legend>
+
+        <div class="form__field">
+          <label for="weight-input" class="form__label">Peso</label>
+          <input id="weight-input" name="weight" type="number" class="form__input" min="4.5" max="500" step="0.5" placeholder="Seu peso">
+        </div>
+
+        <div class="form__field">
+          <label for="height-input" class="form__label">Altura</label>
+          <input id="heght-input" name="height" type="number" class="form__input" min="0.6" max="3" step="0.1" placeholder="Sua altura">
+        </div>
+
+        <input class="form__input form__input--submit" type="submit" value="Calcular IMC" onclick="getData(event); return false;">
+      </form>
+    </section>
+  </div>
+</body>
+
+</html>

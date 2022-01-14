@@ -1,0 +1,194 @@
+:root {
+  --backgroundColor: 
+    linear-gradient(225deg, rgb(244, 255, 94), rgba(0, 255, 221, 0.275) 45%), 
+    linear-gradient(150deg, rgb(140, 0, 255), rgba(208, 255, 0, 0.275) 75%);
+  --fontFamily: "Montserrat";
+}
+
+html {
+  min-height: 580px;
+  height: 100%;
+}
+
+body.body {
+  min-height: 580px;
+  height: 100%;
+  font-family: var(--fontFamily);
+  background: var(--backgroundColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+}
+
+div.container {
+  background: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 520px;
+  height: 100%;
+  max-height: 580px;
+  border-radius: 6px;
+}
+
+h1.container__title, div.column--left h2.column__legend, div.column--left li.table__item {
+  margin-left: 16px;
+}
+
+h1.container__title {
+  margin-bottom: 0px;
+  cursor: default;
+}
+
+section.container__section {
+  margin-bottom: 32px;
+}
+
+section.container__section--table {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.column {
+  width: 50%;
+}
+
+h2.column__legend {
+  font-size: 16px;
+  cursor: default;
+}
+
+ul.table {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+li.table__item {
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 4px 16px 4px 0;
+  cursor: default;
+}
+
+li.table__item:nth-child(2n+2) {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+form.form {
+  display: flex;
+  flex-direction: column;
+}
+
+div.form__field {
+  display: flex;
+  flex-direction: column;
+  margin: 24px 0 0 0;
+}
+
+legend.form__legend, label.form__label, input.form__input, p.error-message {
+  margin: 0 16px;
+}
+
+legend.form__legend {
+  font-size: 24px;
+  font-weight: 700;
+  cursor: default;
+}
+
+label.form__label {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+input.form__input {
+  padding: 6px;
+  box-shadow: 0 0 0 0;
+  outline: 0;
+  color: rgb(73, 73, 73);
+}
+
+input.form__input:focus {
+  box-shadow: 0 0 6px 0;
+}
+
+input.form__input[type="number"] {
+  appearance: textfield;
+}
+
+input.empty {
+  border: 2px solid rgb(255, 0, 0);
+}
+
+input.empty:focus {
+  box-shadow: 0 0 6px 0 rgb(255, 0, 0);
+}
+
+input.form__input--submit, button.popup__button {
+  margin-top: 24px;
+  width: 150px;
+  height: 36px;
+  align-self: center;
+  font-weight: 700;
+  color: #FFF;
+  border: 0;
+  background: linear-gradient(270deg, rgba(172, 184, 13, 0.6), rgba(140, 0, 255, 0.75), rgba(225, 0, 255, 0.75) 90%);
+  background-size: 200% 200%;
+  animation: colors 24s infinite ease-in-out;
+  cursor: pointer;
+}
+
+@keyframes colors {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+div.container__opacity {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--backgroundColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.popup {
+  width: 100%;
+  max-width: 440px;
+  height: 240px;
+  background: rgba(51, 51, 51, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div.popup__message {
+  text-align: center;
+}
+
+p.message__text {
+  margin: 2px;
+  padding: 0;
+}
+
+p.message__text--status {
+  font-size: 32px;
+}
+
+@media screen and (max-width: 520px) {
+  div.container {
+    min-height: 580px;
+    border-radius: 0;
+    max-height: fit-content;
+  }
+}
